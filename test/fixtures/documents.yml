@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  signature: MyString
+  signed_on: 2016-08-28 20:07:15
+
+two:
+  user_id: 1
+  signature: MyString
+  signed_on: 2016-08-28 20:07:15

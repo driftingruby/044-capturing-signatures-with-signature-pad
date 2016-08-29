@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
-  root 'visitors#index'
+  devise_for :users, controllers: {
+    sessions: 'users/sessions',
+    passwords: 'users/passwords',
+    registrations: 'users/registrations'
+  }
 
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :documents, only: [:new, :create], path: :terms_and_conditions
+  
+  get :private_content, to: 'visitors#private_content'
+  root 'visitors#index'
 end
